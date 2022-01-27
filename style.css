@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 :root{
-    --red: #ff3838; 
+    --red: #4a9eec; 
 }
 
 *{
@@ -293,10 +293,178 @@ header .navbar a:hover::after{
 .steps .box h3{
     font-size: 3rem;
     color: #333;
+    padding: 1rem ;
+}
+
+.gallery .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.gallery .box-container .box{
+    height: 25rem;
+    flex: 1 1 30rem;
+    border: 1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+    position: absolute;
+    top: -100; left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    padding: 2rem;
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.gallery .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.gallery .box-container .box .content h3{
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.gallery .box-container .box:hover .content{
+    top: 0%;
+}
+
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    border: 2rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    flex: 1 1 30rem;
+    background: #333;
+    margin-top: 6rem;
+}
+
+.review .box-container .box img{
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    border: 1rem solid #fff;
+    margin-top: -8rem;
+    object-fit: cover;
+}
+
+.review .box-container .box h3{
+    font-size: 2.5rem;
+    color: #fff;
+    padding: .5rem 0;
+}
+
+.review .box-container .box .stars i{
+    font-size: 2rem;
+    color: var(--red);
+    padding: .5rem 0;
+}
+
+.review .box-container .box p{
+    font-size: 1.7rem;
+    color: #eee;
     padding: 1rem 0;
 }
 
+.order .row{
+    padding: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-radius: .5rem;
+}
 
+.order .row .image{
+    flex: 1 1 30rem;
+}
+
+.order .row .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.order .row form{
+    flex: 1 1 50rem;
+    padding: 1rem;
+}
+
+.order .row form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.order .row form .inputBox input, .order .row form textarea{
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    width: 49%;
+}
+
+.order .row form textarea{
+    width: 100%;
+    resize: none;
+    height: 15rem;
+}
+
+.order .row form .btn{
+    background: none;
+
+}
+
+.order .row form .btn:hover{
+    background: var(--red);
+}
+
+.footer{
+    background: #000;
+    text-align: center;
+}
+.footer .share{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .credit{
+    padding: 2.5rem 1rem;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2rem;
+}
+.footer .credit span{
+    color: var(--red);
+}
 
 
 
@@ -341,7 +509,7 @@ header .navbar a:hover::after{
         background: #fff;
     } 
 }
-@media(max-width: 400px){
+@media(max-width: 450px){
     #menu-bar{
         display: initial;
     }
@@ -349,10 +517,10 @@ header .navbar a:hover::after{
     html{
         font-size: 50%;
     }
-    header{
-        padding: 2rem;
-    }
     .navbar{
         display: none;
+    }
+    .order .row form .inputBox input{
+        width: 100%;
     }
 }
